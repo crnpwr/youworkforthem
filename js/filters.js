@@ -30,6 +30,20 @@ export const createExpenseFilterButtons = (data) => {
 };
 
 
+// Extracted handler for MP filter button clicks
+export function handleMpFilterButtonClick(filter, data) {
+    const isActive = d3.select(`.filter-button-mp[data-type="${filter.id}"]`).classed("active");
+    if (isActive) {
+        d3.select(`.filter-button-mp[data-type="${filter.id}"]`).classed("active", false);
+    }
+    else {
+        d3.select(`.filter-button-mp[data-type="${filter.id}"]`)
+            .classed("active", true); // Add active class to the clicked button
+    }
+    // Filter the data based on the active filters
+    filterMPCircles(data); // Call the filter function to update circle opacity
+}
+
 export const createMpFilterButtons = async (data) => {
     const buttonContainer = d3.select("#mp-filter-buttons"); // Select the container for MP filter buttons
 
@@ -40,22 +54,7 @@ export const createMpFilterButtons = async (data) => {
             .attr("class", "filter-button-mp")
             .attr("data-type", filter.id) // Use the filter id as data-type
             .text(`${filter.emoji} ${filter.name}`) // Use emoji and name for button label
-            .on("click", () => {
-                //d3.selectAll(".filter-button-mp")
-                //    .classed("active", false); // Remove active class from all buttons
-                const isActive = d3.select(`.filter-button-mp[data-type="${filter.id}"]`).classed("active");
-                if (isActive) {
-                    d3.select(`.filter-button-mp[data-type="${filter.id}"]`).classed("active", false);
-                }
-                else {
-                    d3.select(`.filter-button-mp[data-type="${filter.id}"]`)
-                        .classed("active", true); // Add active class to the clicked button
-                }
-
-                // Filter the data based on the active filters
-                filterMPCircles(data); // Call the filter function to update circle opacity
-                
-            });
+            .on("click", () => handleMpFilterButtonClick(filter, data));
     });
 };
 

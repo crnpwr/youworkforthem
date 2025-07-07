@@ -1,4 +1,5 @@
 import { MP_CIRCLE_RADIUS, MP_CIRCLE_RADIUS_SELECTED } from './shared_constants.js';
+import { populateExplainerPanel } from './explainerPanel.js';
 
 // Handle mouse movement
 export const handleMouseEvents = (data, value_field) => {
@@ -84,13 +85,7 @@ export const handleMouseEvents = (data, value_field) => {
 export function selectIndividualMPCircle(mp) {
     // mp should be the full MP data object
     selectCircle(mp.mp_id, true);
-
-    d3.select("#explainer-header")
-        .text("MP Spotlight");
-
-    d3.select("#explainer-panel")
-        .html(mp['mp_infobox_html']);
-
+    populateExplainerPanel(mp);
     if (window.innerWidth <= 820) {
         document.getElementById('info-panel').classList.add('popup-open');
     }

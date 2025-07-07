@@ -7,12 +7,12 @@ import { createSwarmTooltip } from './tooltips.js';
 // Swarm graph for MPs, value_field placing them on a vertical axis.
 // This is a force-directed graph where each circle represents an MP's claim
 export const drawMpSwarm = (data, value_field, draw_new) => {
-    const margin = {top: 5, left: 45, right: 40, bottom: 20};
+    const margin = {top: 5, left: 45, right: 25, bottom: 5};
     
     // Responsive chart dimensions
     let width, height;
     if (window.innerWidth <= 500) {
-        width = 350;
+        width = 400;
         height = 700;
     } else if (window.innerWidth <= 700) {
         width = 500;
