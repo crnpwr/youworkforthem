@@ -17,32 +17,29 @@
 			<div class="col col-9">
 				<h3 id="accom-swarm-header">Total Expense claims for each MP since July 2024</h3>
 				<div class="responsive-svg-container">
+					<button id="open-panel-btn" class="about-btn" style="display:none;">About</button>
 					<div id="accom-swarm"></div>
-					<div id="filter-buttons" style="margin-bottom: 20px;"></div>
-					<div id="mp-filter-buttons" style="margin-top: 20px;"></div>
 				</div>
+				<div id="filter-buttons" style="margin-bottom: 20px;"></div>
+				<div id="mp-filter-buttons" style="margin-top: 20px;"></div>
+				<div class="source">Data sources: <a href="https://www.theipsa.org.uk/mp-staffing-business-costs" target="_blank">IPSA</a>,
+			<a href="https://www.parliament.uk" target="_blank">Parliament</a> (see project docs for notes on data gathering)
+		</div>
 			</div>
-			<div class="col col-3">
-				
-				<h3 style="text-align: center;">About this visualization</h3>
+			<div class="col col-3" id="info-panel">
+				<button class="close-panel" id="close-panel-btn" style="display:none;">×</button>
+				<h3 id="explainer-header" style="text-align: center;">About this visualization</h3>
 				<div class="responsive-svg-container small">
 					<div id="explainer-panel"></div>
 				</div>
 			</div>
 		</div>
 
-
-		<div class="source">Data source: <a
-				href="https://www.theipsa.org.uk/mp-staffing-business-costs">IPSA</a> (see project docs for notes on data gathering)
-		</div>
+		
 	</div>
 
-	<!-- Load your scripts here -->
 	<script src="https://d3js.org/d3.v7.min.js"></script>
-	<script src="js/shared_constants.js"></script>
-	<script src="js/interactions.js"></script>
-	<script src="js/static.js"></script>
-	<script src="js/expense_scatter.js"></script>
+	<script type="module" src="js/main.js"></script>
 </body>
 
 </html>
