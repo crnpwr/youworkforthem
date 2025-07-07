@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MPs Claims and Interests</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/visualization.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>YouWorkForThem</h1>
+		<h2>Explore MPs Expenses and Declarations</h2>
+		<div class="row">
+			<div class="col col-9">
+				<h3 id="accom-swarm-header">Total Expense claims for each MP since July 2024</h3>
+				<div class="responsive-svg-container">
+					<div id="accom-swarm"></div>
+					<div id="filter-buttons" style="margin-bottom: 20px;"></div>
+					<div id="mp-filter-buttons" style="margin-top: 20px;"></div>
+				</div>
+			</div>
+			<div class="col col-3">
+				
+				<h3 style="text-align: center;">About this visualization</h3>
+				<div class="responsive-svg-container small">
+					<div id="explainer-panel"></div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="source">Data source: <a
+				href="https://www.theipsa.org.uk/mp-staffing-business-costs">IPSA</a> (see project docs for notes on data gathering)
+		</div>
+	</div>
+
+	<!-- Load your scripts here -->
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="js/shared_constants.js"></script>
+	<script src="js/interactions.js"></script>
+	<script src="js/static.js"></script>
+	<script src="js/expense_scatter.js"></script>
+</body>
+
+</html>
