@@ -179,7 +179,24 @@ a:hover, a:focus {
   margin-top: 2em;
 }
 
-#open-panel-btn,
+#open-panel-btn, .about-btn {
+  background: #b2f0f7;
+  color: #1a2533;
+  border: 1px solid #1a2533;
+  border-radius: 4px;
+  padding: 8px 18px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+#open-panel-btn:hover, .about-btn:hover, .about-btn:focus {
+  background: #7edbe6;
+  color: #0d141f;
+}
+
+/*#open-panel-btn,
 .about-btn {
   background: #0063ba;
   color: #fff;
@@ -198,7 +215,7 @@ a:hover, a:focus {
 .about-btn:hover {
   background: #004a8f;
   color: #fff;
-}
+}*/
 
 body {
   margin: 0;

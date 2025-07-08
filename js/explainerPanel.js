@@ -47,7 +47,7 @@ export function populateExplainerPanel(mp) {
 
 // Store the default explainer panel content
 const defaultExplainerContent = `
-    <p align="right">This project is designed to study the financial and voting records of members of the UK parliament.</p>
+    <p align="right">This project lets you explore financial and voting records of members of the UK parliament.</p>
     <p align="right">In the chart on the left, each circle is an MP. The colour of the circle shows the MP's party.</p>
     <p align="right">The default view shows who's accepted the most valuable gifts from people. The MPs at the top take the most freebies.</p>
     <p align="right">Use the buttons below the graph to change the values or highlight groups of MPs.</p> 
