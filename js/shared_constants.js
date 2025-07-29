@@ -21,6 +21,7 @@ export const expenseTypes = [
     { id: "accommodation", name: "Accommodation", value_field: "expenses_Accommodation", emoji: "🏠", header_text: "Accommodation expenses claimed by each MP since July 2024"},
     {id: "hospitality", name: "Hospitality & Gifts", value_field: "TotalHospitalityValue", emoji: "🥂", header_text: "Hospitality and gifts registered by each MP since July 2024"},
     { id: "total", name: "Total Expenses", value_field: "expenses_total", emoji: "🧾", header_text: "Total expense claims for each MP since July 2024"},
+    { id: "earnings", name: "Earnings Outside Parliament", value_field: "TotalOutsideEarnings", emoji: "💼", header_text: "Earnings outside of Parliament for each MP since July 2024" },
     // More values are available here but commented out to de-clutter the UI
     //{ id: "office", name: "Office", value_field: "expenses_Office Costs", emoji: "🏢" },
     //{ id: "staff", name: "Staff", value_field: "expenses_Staffing", emoji: "👨‍💼" },

@@ -2,10 +2,11 @@
 import { createExpenseFilterButtons, createMpFilterButtons } from './filters.js';
 import { setupPanelPopup, populateExplainerPanel } from './explainerPanel.js';
 import { mpFilters } from './shared_constants.js';
+import { loadMpData } from './dataLoader.js';
 
 // Main entry point
 document.addEventListener("DOMContentLoaded", function () {
-    d3.csv("data/mp_data_summary.csv", d3.autoType).then(data => {
+    loadMpData().then(data => {
         // Make mpData globally accessible
         window.mpData = data;
         window.mpFilters = mpFilters;

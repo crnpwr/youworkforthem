@@ -1,11 +1,19 @@
 # Ignore everything
 *
 
-# But not these files/folders
+# Explicitly include directories and files
 !index.html
+!css/
+!js/
+!data/
+!imgs/
+
+# But not these files/folders
 !css/**
 !js/**
 !data/**
+!imgs/**
 
 # Don't ignore .gitignore itself
 !.gitignore
+data/.~lock.rent_index.csv#
