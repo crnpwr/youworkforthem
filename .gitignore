@@ -3,6 +3,7 @@
 
 # Explicitly include directories and files
 !index.html
+!landlord-scroll.html
 !css/
 !js/
 !data/
