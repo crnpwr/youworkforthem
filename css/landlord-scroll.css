@@ -130,8 +130,22 @@
 			font-size: 1.5rem;
 			background-color: #3b3b3b;
 		}
-/*}
+		
+.athwal-residential-press,
+.athwal-commercial-press,
+.reeves-income-press,
+.ali-resigns-press {
+    width: 30%; /* Default size */
+    height: auto; /* Maintain aspect ratio */
+}
 
-
+@media screen and (max-width: 600px) {
+    .athwal-residential-press,
+    .athwal-commercial-press,
+	.reeves-income-press,
+	.ali-resigns-press {
+        width: 100%; /* Increase size for smaller screens */
+    }
+}
 
 /* Add more styles for graph-scroll sections and sticky graphics as needed */

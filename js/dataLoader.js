@@ -14,3 +14,10 @@ export function loadMpData() {
     }
     return mpDataPromise;
 }
+
+export function loadMpDataLandlordStatic() {
+    if (!mpDataPromise) {
+        mpDataPromise = d3.csv("data/mp_data_summary_static_landlords.csv", d3.autoType);
+    }
+    return mpDataPromise;
+}
