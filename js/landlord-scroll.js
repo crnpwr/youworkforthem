@@ -365,7 +365,7 @@ function setupScrollama(scroller, step, figure) {
                     .attr("class", "ali-resigns-press")
                     .attr("preserveAspectRatio", "xMinYMin meet")
                     .attr("x", WIDTH * 1 / 16)
-                    .attr("y", HEIGHT / 8);
+                    .attr("y", 4 * HEIGHT / 8);
             } else {
                 // Remove news image
                 d3.select("svg").select(".ali-resigns-press")
@@ -465,7 +465,7 @@ function drawRentLineChart(svg) {
             .range([0, innerChartWidth]);
 
         const yScale = d3.scaleLinear()
-            .domain([100, 140]) // Adjust domain based on your data
+            .domain([100, 150]) // Adjust domain based on your data
             .range([innerChartHeight, 0]);
 
         // Define line generator
