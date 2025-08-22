@@ -106,7 +106,7 @@ export async function lastUpdateDate() {
                 if (oldDate) oldDate.remove();
                 const dateDiv = document.createElement('div');
                 dateDiv.className = 'last-updated-info';
-                dateDiv.innerHTML = `Last data update: <strong>${lastUpdated}</strong>`;
+                dateDiv.innerHTML = `Last data update: <strong>${lastUpdated}</strong><br><br><br>`;
                 explainerPanel.appendChild(dateDiv);
             }
         }

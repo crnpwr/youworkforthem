@@ -112,6 +112,7 @@
 		.step {
 			margin: 0 auto 2rem auto;
 			color: #fff;
+			
 			/*background-color: rgba(0, 0, 0, 0.1);*/
 		}
 
@@ -128,6 +129,7 @@
 			text-align: center;
 			padding: 1rem;
 			font-size: 1.5rem;
+			border-radius: 10px;
 			background-color: #3b3b3b;
 		}
 		

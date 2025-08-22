@@ -35,14 +35,7 @@
 }
 
 /* Dashboard-specific layout and UI styles moved from base.css */
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px;
-  width: 100%;
-  max-width: 1200px;
-}
+
 .row {
   display: flex;
   flex-wrap: wrap;

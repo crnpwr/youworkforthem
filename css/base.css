@@ -8,6 +8,14 @@ html {
 *, ::after, ::before {
   box-sizing: inherit;
 }
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
 body {
   margin: 0;
   background-color: #fcfbdc;
