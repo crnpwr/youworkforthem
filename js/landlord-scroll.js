@@ -1,6 +1,7 @@
 // landlord-scroll.js
 // Entry point for the landlord-focused scroll/story experience
 import { loadMpDataLandlordStatic } from './dataLoader.js';
+import { partyColours } from './shared_constants.js';
 
 // Constants
 let landlordMps = [];
@@ -518,6 +519,18 @@ function drawRentLineChart(svg) {
                 .ticks(5)
                 .tickFormat(d => `+${d - 100}%`));
 
+        // Add title
+        innerChartArea.append("text")
+            .attr("class", "chart-title")
+            .attr("x", innerChartWidth / 2)
+            .attr("y", -20)
+            .style("text-anchor", "middle")
+            .style("font-size", "14px")
+            .style("font-family", "Roboto, sans-serif")
+            .style("fill", "#145114")
+            .text("Private Rent Costs Since 2015")
+            .style("font-weight", "bold");
+
         // Add y-axis label
         innerChartArea.append("text")
             .attr("class", "y-axis-label")
@@ -532,20 +545,25 @@ function drawRentLineChart(svg) {
 
         // Add source
         innerChartArea.append("foreignObject")
-            .attr("x", innerChartWidth + 20)
-            .attr("y", innerChartHeight + 30)
+            .attr("x", 0)
+            .attr("y", innerChartHeight + 20)
             .attr("width", 120)
             .attr("height", 30)
             .append("xhtml:div")
             .style("font-size", "12px")
             .style("font-family", "Roboto, sans-serif")
-            .style("text-align", "right")
+            //.style("text-align", "right")
+            .style("fill", "#145114")
             .html('<span>Source: <a href="https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/indexofprivatehousingrentalprices/january2024" target="_blank" style="color: #145114; text-decoration: none;">ONS</a></span>');
 
         // Add legend
         const legend = innerChartArea.append("g")
             .attr("class", "legend")
-            .attr("transform", `translate(${innerChartWidth + 20}, 20)`);
+            .attr("transform", `translate(20, 20)`)
+            .style("font-size", "12px")
+            .style("font-family", "Roboto, sans-serif")
+            .style("fill", "#145114");
+            //.attr("transform", `translate(${innerChartWidth + 20}, 20)`);
 
 
         regions.forEach((region, index) => {
