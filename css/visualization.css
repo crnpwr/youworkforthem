@@ -114,6 +114,11 @@
   color: #fff;
 }
 
+.filter-text{
+  font-size: 16px;
+  font-weight: 500;
+}
+
 .filter-button:hover {
   background-color: #96c7c7; /* Slightly darker teal */
 }

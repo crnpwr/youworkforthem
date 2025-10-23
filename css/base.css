@@ -11,8 +11,8 @@ html {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 5px;
+  padding-left: 5px;
   width: 100%;
   max-width: 1200px;
 }

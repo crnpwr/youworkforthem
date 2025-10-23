@@ -6,6 +6,11 @@ import { drawMpSwarm } from './swarmGraph.js';
 export const createExpenseFilterButtons = (data) => {
     const buttonContainer = d3.select("#filter-buttons");
 
+    // Add text line
+    buttonContainer.append("p")
+        .attr("class", "filter-text")
+        .text("Explore financial records for");
+
     expenseTypes.forEach((type, i) => {
         const btn = buttonContainer
             .append("button")
@@ -46,6 +51,11 @@ export function handleMpFilterButtonClick(filter, data) {
 
 export const createMpFilterButtons = async (data) => {
     const buttonContainer = d3.select("#mp-filter-buttons"); // Select the container for MP filter buttons
+
+     // Add text line
+    buttonContainer.append("p")
+        .attr("class", "filter-text")
+        .text("Highlight MPs");
 
     // Create buttons for each filter
     mpFilters.forEach(filter => {

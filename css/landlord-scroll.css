@@ -71,13 +71,13 @@
   #scrolly {
 			position: relative;
 			/*background-color: #f3f3f3;*/
-			padding: 1rem;
+			/*padding: 1rem;*/
 		}
 
 		article {
 			position: relative;
 			padding: 0;
-			max-width: 20rem;
+			max-width: 25rem;
 			margin: 0 auto;
             transform: translate3d(0, 0, 0);
 		}
@@ -97,7 +97,7 @@
 
 		figure p {
 			text-align: center;
-			padding: 1rem;
+			/* padding: 1rem; */
 			position: absolute;
 			top: 50%;
 			left: 50%;

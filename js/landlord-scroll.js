@@ -113,9 +113,12 @@ function updateCircleAndImage(mpId, scaleFactor) {
 
 // Scrollama Setup
 function setupScrollama(scroller, step, figure) {
+
     const stepFunctions = {
         "rental-crisis-intro": (enterOrExit, direction) => {
             if (enterOrExit === "enter") {
+                // Set alt-text for screen readers
+                figure.select("svg").attr("aria-label", "Graph showing increase in UK rental costs since 2015. Northern Ireland is particularly high, at over 40%.");
                 // Show the rental crisis intro
                 if (direction === 'up') {
                     drawRentLineChart(figure.select("svg"));
@@ -133,6 +136,8 @@ function setupScrollama(scroller, step, figure) {
         },
         "outline-of-houses" : (enterOrExit, direction) => {
             if (enterOrExit === "enter") {
+                // Set alt-text for screen readers
+                figure.select("svg").attr("aria-label", "Figure with pictures of houses, offices and farms.");
                 // Lay out 171 houses in a grid
                 const numHouses = 171;
                 const sqrtHouses = Math.ceil(Math.sqrt(numHouses));
