@@ -38,11 +38,12 @@ export const handleMouseEvents = (data, value_field) => {
             if (xPosition > 420 / 2) {
                 xPosition -= 100; // Adjust to keep tooltip within viewport
             } else {
-                xPosition += 20; } // Adjust to keep tooltip to the right of the mouse
+                xPosition += 5;
+                } // Adjust to keep tooltip to the right of the mouse
             if (yPosition > 520 / 2) {
                 yPosition -= 100; // Adjust to keep tooltip within viewport
             } else {
-                yPosition += 20; // Adjust to keep tooltip below the mouse
+                yPosition += 1; // Adjust to keep tooltip below the mouse
             }
             // Set the tooltip position
             // Using the mouse position

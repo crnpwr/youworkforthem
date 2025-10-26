@@ -182,8 +182,12 @@ function setupScrollama(scroller, step, figure) {
             }},
         "mp-landlords" : (enterOrExit, direction) => {
             if (enterOrExit === "enter") {
+                    // Set alt-text for screen readers
+                    figure.select("svg").attr("aria-label", "Circles with faces indicating landlord MPs.");
+
                 if (direction === 'down') {
                     console.log("Draw circles")
+                    
                     // Draw circles for landlord MPs
                     const svg = d3.select("svg");
                     
@@ -210,6 +214,9 @@ function setupScrollama(scroller, step, figure) {
                 
         "resize-property-holdings": (enterOrExit, direction) => {
             if (enterOrExit === "enter") {
+                // Set alt-text for screen readers
+                figure.select("svg").attr("aria-label", "Circles with faces indicating landlord MPs, sized by property counts.");
+
                 if (direction === 'down') {
                     resizeCirclesOnPropertyCount();
 
@@ -242,6 +249,9 @@ function setupScrollama(scroller, step, figure) {
     },
         "athwal-highlight": (enterOrExit, direction) => {
             if (enterOrExit === "enter") {
+                // Set alt-text for screen readers
+                figure.select("svg").attr("aria-label", "The landlord with most properties is highlighted - Jas Athwal.");
+
                 if (direction === 'down') {
                 updateCircleOpacity([5227]); // Highlight Athwal circle
             }}
@@ -252,6 +262,9 @@ function setupScrollama(scroller, step, figure) {
         },
         "athwal-residential-press": (enterOrExit, direction) => {
             if (enterOrExit === "enter") {
+                // Set alt-text for screen readers
+                figure.select("svg").attr("aria-label", "A screenshot of an article is visible, criticising the poor state of Athwal's residential properties.");
+
                 updateCircleOpacity([5227]);
                 // Overlay image from "imgs/athwal-residential-press.png" on top of svg
                 const svg = d3.select("svg");
@@ -274,6 +287,9 @@ function setupScrollama(scroller, step, figure) {
         },
         "athwal-commercial-press": (enterOrExit, direction) => {
             if (enterOrExit === "enter") {
+                // Set alt-text for screen readers
+                figure.select("svg").attr("aria-label", "A screenshot of an article is visible, criticising the poor state of Athwal's commercial properties.");
+
                 updateCircleOpacity([5227]);
                 console.log("Athwal commercial press enter");
                 // Overlay image from "imgs/athwal-residential-press.png" on top of svg
@@ -298,9 +314,17 @@ function setupScrollama(scroller, step, figure) {
         "reeves-highlight": (enterOrExit, direction) => {
             updateCircleOpacity([4031]);
             resizeCirclesOnPropertyCount();
+
+            if (enterOrExit === "enter") {
+                // Set alt-text for screen readers
+                figure.select("svg").attr("aria-label", "Rachel Reeves is highlighted.");
+            }
         },
         "reeves-expand-74": (enterOrExit, direction) => {
             if (enterOrExit === "enter") {
+                // Set alt-text for screen readers
+                figure.select("svg").attr("aria-label", "Rachel Reeves's face expands to indicate her high rental income.");
+
                 updateCircleAndImage(4031, 7.4); // Scale up 7.4x
 
                 // Add news image
@@ -322,11 +346,17 @@ function setupScrollama(scroller, step, figure) {
         },
         "reeves-household-income": (enterOrExit, direction) => {
             if (enterOrExit === "enter") {
+                // Set alt-text for screen readers
+                figure.select("svg").attr("aria-label", "Rachel Reeves's face expands larger to indicate her high household income.");
+
                 updateCircleAndImage(4031, 40.7); // Scale up 40.7x
             }
         },
         "reeves-vs-average": (enterOrExit, direction) => {
             if (enterOrExit === "enter") {
+            // Set alt-text for screen readers
+            figure.select("svg").attr("aria-label", "Average household income is compared to that of the Reeves family.");
+
             updateCircleAndImage(4031, 40.7); 
             // Create a temporary circle to highlight average income
             let avgIncomeR = MP_CIRCLE_RADIUS * Math.sqrt(3.67);
@@ -355,14 +385,23 @@ function setupScrollama(scroller, step, figure) {
         "ali-highlight": (enterOrExit, direction) => {
             updateCircleOpacity([4138]);
             resizeCirclesOnPropertyCount();
+
+            if (enterOrExit === "enter") {
+                // Set alt-text for screen readers
+                figure.select("svg").attr("aria-label", "Rushanara Ali is highlighted.");
+            }
         },
         "ali-expand-496": (enterOrExit, direction) => {
             if (enterOrExit === "enter") {
-            updateCircleAndImage(4138, 4.96); // Scale up 4.96x
+                // Set alt-text for screen readers
+                figure.select("svg").attr("aria-label", "Rushanara Ali's circle expands to indicate high rental income.");
+                updateCircleAndImage(4138, 4.96); // Scale up 4.96x
     }
         },
         "ali-expand-580": (enterOrExit, direction) => {
             if (enterOrExit === "enter") {
+                // Set alt-text for screen readers
+                figure.select("svg").attr("aria-label", "Rushanara Ali's circle expands to indicate how she further increased that rental income.");
                 updateCircleAndImage(4138, 5.8); // Scale up 5.8x
 
                 // Add news image
@@ -383,6 +422,8 @@ function setupScrollama(scroller, step, figure) {
         },
         "anti-renters-rights": (enterOrExit, direction) => {
             if (enterOrExit === "enter") {
+                // Set alt-text for screen readers
+                figure.select("svg").attr("aria-label", "MPs who voted against the renters' rights bill are highlighted.");
                 {
                     resizeCirclesOnPropertyCount();
                     // Highlight anti-renters landlords
@@ -398,6 +439,11 @@ function setupScrollama(scroller, step, figure) {
     },
         "outro": (enterOrExit, direction) => {
             updateCircleOpacity([]); // Reset opacity
+
+            if (enterOrExit === "enter") {
+                // Set alt-text for screen readers
+            figure.select("svg").attr("aria-label", "Circles with faces indicating landlord MPs, sized by property counts.");
+            }
         }
 }
 
